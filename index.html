@@ -1,0 +1,199 @@
+<!doctype html>
+	<html lang="en">
+		<head>
+			<meta charset="utf-8"/>
+			<link rel="stylesheet" type="text/css" href="style.css">
+			<!-- Ovo iznad je link ka nasem css-u -->
+			<title>home Ford Taunus</title>
+		<script src="js/player.js"></script>
+		
+		<style>
+		#listNames{
+		margin:0 7px 0 7px;
+		}
+#listNames a
+{
+  text-decoration:none;
+  color:#161630;
+}
+.marquee {
+  width: 300px;
+  margin: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  box-sizing: border-box;
+  text-shadow: black 1px 2px;
+}
+
+.marquee span {
+  display: inline-block;
+  padding-left: 100%;
+  /* show the marquee just outside the paragraph */
+  animation: marquee 15s linear infinite;
+}
+
+.marquee span:hover {
+  animation-play-state: paused
+}
+
+
+/* Make it move */
+
+@keyframes marquee {
+  0% {
+    transform: translate(0, 0);
+  }
+  100% {
+    transform: translate(-100%, 0);
+  }
+}
+</style>
+		</head>
+		
+		<body>
+			<a name="top"></a> <!-- vraćanje na vrh stranice -->
+			<div id="mainWrapper">
+				<header id="header">
+					<div id="naslov" style="text-shadow: black 1px 0 10px;"><h2 style="color:#0bd3d4; margin:0;"><em>Ford Taunus</em></h2>
+					<em>King of the German hills with American soul...Crusader from the past ...</em></div>
+					<div id="flags" > <img src="serbianflag.jpg" width="60px"; /> <img src="britishflag.jpg" width="60px";> </div>
+					<div id="nav"><a href="index.html"><em>Home</em></a> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <a href="istorija.html"><em>Istorija</em></a> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  <a href="linksSrb.html"><em>Linkovi</em></a> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <a href="shopSrb.html"><em>Prodavnica</em></a> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <a href="o_nama.html"><em>O nama</em></a></div>
+				</header>
+				<div id="wrap">
+					<div id="sidebar">
+					
+					<div style="background-image: linear-gradient(#2529d2, #f375c9); text-shadow: black 1px 2px; padding-left:7px;"><em>Uživajte u pogledu na Miami Beach uz našu muziku 24 sata dnevno. Dugmići na radiju su funkcionalni. Odaberite svoj omiljeni muzički pravac iz tog vremena.</em></div>
+							
+							<div id="dugmici">
+							<button id='playButton' type='button' onclick='playAudio()'>Play</button>
+							<button id='stopButton' type='button' onclick='stopAudio()'>Stop</button>
+							<button id='nextButton' type='button' onclick='nextAudio()'>Next</button>
+							<button id='prevButton' type='button' onclick='prevAudio()'>Prev</button>
+							<button id='popPlayList' type='button' onclick='radioStation(0)'>Pop</button>
+							<button id='rockPlayList' type='button' onclick='radioStation(1)'>Rock</button>
+							<button id='moviePlayList' type='button' onclick='radioStation(2)'>Movie</button>
+							<button id='syntPlayList' type='button' onclick='radioStation(3)'>Synt</button>
+							<button id='skinButton' type='button' onclick='skinChange()'>Skin</button>
+							</div>
+						<div id='thisSong' class="marquee"></div>
+						<div id="listNames"></div><br/>
+						<div style="margin:0 auto; width:290px"><img src="giphy.gif" width="290px" /></div>
+					</div>
+					<div id="mainContent0">
+						 <div style='margin-right:5px;'><iframe width="560" height="315" src="https://www.youtube.com/embed/cmkAbDUEoyA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe><!--Broadcast is powered by <a href="https://balticlivecam.com/cameras/united-states/miami/miami-beach/">Baltic Live Cam</a>--></div>
+						
+						<!--player-->
+						<div id="saltabla">				
+						<img src="skins/Blaupunkt-Frankfurt-1972.jpg" style="position:relative; top:66px; left:166px; "width="300px" usemap="#radiomap0" class="skinImage"/><br></div>
+
+						<map name="radiomap0">
+						  <area shape="circle" coords="33,40,20"  onclick='playAudio()' alt="Play" title="Play">
+						  <area shape="circle" coords="267,40,20"  onclick='stopAudio()' alt="Stop" title="Stop">
+						  <area shape="rect" coords="75,58,100,68"  onclick='radioStation(0)' alt="Pop" title="Pop">
+						  <area shape="rect" coords="106,58,131,68"  onclick='radioStation(1)' alt="Rock" title="Rock">
+						  <area shape="rect" coords="138,58,163,68"  onclick='radioStation(2)' alt="Movie" title="Movie">
+						  <area shape="rect" coords="169,58,193,68"  onclick='radioStation(3)' alt="Synt" title="Synt">
+						  <area shape="rect" coords="200,58,213,68" onclick='skinChange()' alt="Skin" title="Skin">
+						</map>
+						<map name="radiomap1">
+						  <area shape="circle" coords="30,47,20"  onclick='playAudio()' alt="Play" title="Play">
+						  <area shape="circle" coords="270,47,20"  onclick='stopAudio()' alt="Stop" title="Stop">
+						  <area shape="rect" coords="75,63,100,77"  onclick='radioStation(0)' alt="Pop" title="Pop">
+						  <area shape="rect" coords="106,63,131,77"  onclick='radioStation(1)' alt="Rock" title="Rock">
+						  <area shape="rect" coords="138,63,163,77"  onclick='radioStation(2)' alt="Movie" title="Movie">
+						  <area shape="rect" coords="169,63,193,77"  onclick='radioStation(3)' alt="Synt" title="Synt">
+						  <area shape="rect" coords="200,63,213,77"  onclick='skinChange()' alt="Skin" title="Skin">
+						</map>
+						<map name="radiomap2">
+						  <area shape="circle" coords="43,48,20"  onclick='playAudio()' alt="Play" title="Play">
+						  <area shape="circle" coords="256,47,20"  onclick='stopAudio()' alt="Stop" title="Stop">
+						  <area shape="rect" coords="80,58,105,74"  onclick='radioStation(0)' alt="Pop" title="Pop">
+						  <area shape="rect" coords="109,58,134,74"  onclick='radioStation(1)' alt="Rock" title="Rock">
+						  <area shape="rect" coords="138,58,163,74"  onclick='radioStation(2)' alt="Movie" title="Movie">
+						  <area shape="rect" coords="166,58,190,74"  onclick='radioStation(3)' alt="Synt" title="Synt">
+						  <area shape="rect" coords="184,58,217,74"  onclick='skinChange()' alt="Skin" title="Skin">
+						</map>
+						<map name="radiomap3">
+						  <area shape="circle" coords="43,50,20"  onclick='playAudio()' alt="Play" title="Play">
+						  <area shape="circle" coords="255,50,20"  onclick='stopAudio()' alt="Stop" title="Stop">
+						  <area shape="rect" coords="80,63,105,79"  onclick='radioStation(0)' alt="Pop" title="Pop">
+						  <area shape="rect" coords="109,63,134,79"  onclick='radioStation(1)' alt="Rock" title="Rock">
+						  <area shape="rect" coords="137,63,162,79"  onclick='radioStation(2)' alt="Movie" title="Movie">
+						  <area shape="rect" coords="166,63,190,79"  onclick='radioStation(3)' alt="Synt" title="Synt">
+						  <area shape="rect" coords="198,63,218,79"  onclick='skinChange()' alt="Skin" title="Skin">
+						</map>
+						<map name="radiomap4">
+						  <area shape="circle" coords="43,47,20"  onclick='playAudio()' alt="Play" title="Play">
+						  <area shape="circle" coords="257,47,20"  onclick='stopAudio()' alt="Stop" title="Stop">
+						  <area shape="rect" coords="81,61,106,80"  onclick='radioStation(0)' alt="Pop" title="Pop">
+						  <area shape="rect" coords="110,61,135,80"  onclick='radioStation(1)' alt="Rock" title="Rock">
+						  <area shape="rect" coords="138,61,163,80"  onclick='radioStation(2)' alt="Movie" title="Movie">
+						  <area shape="rect" coords="167,61,191,80"  onclick='radioStation(3)' alt="Synt" title="Synt">
+						  <area shape="rect" coords="196,61,219,80"  onclick='skinChange()' alt="Skin" title="Skin">
+						</map>
+						<map name="radiomap5">
+						  <area shape="circle" coords="42,51,20"  onclick='playAudio()' alt="Play" title="Play">
+						  <area shape="circle" coords="257,51,20"  onclick='stopAudio()' alt="Stop" title="Stop">
+						  <area shape="rect" coords="79,64,104,82"  onclick='radioStation(0)' alt="Pop" title="Pop">
+						  <area shape="rect" coords="108,64,133,82"  onclick='radioStation(1)' alt="Rock" title="Rock">
+						  <area shape="rect" coords="136,64,161,82"  onclick='radioStation(2)' alt="Movie" title="Movie">
+						  <area shape="rect" coords="165,64,189,82"  onclick='radioStation(3)' alt="Synt" title="Synt">
+						  <area shape="rect" coords="194,64,217,82"  onclick='skinChange()' alt="Skin" title="Skin">
+						</map>
+						<map name="radiomap6">
+						  <area shape="circle" coords="46,48,20"  onclick='playAudio()' alt="Play" title="Play">
+						  <area shape="circle" coords="254,48,20"  onclick='stopAudio()' alt="Stop" title="Stop">
+						  <area shape="rect" coords="83,61,106,79"  onclick='radioStation(0)' alt="Pop" title="Pop">
+						  <area shape="rect" coords="110,61,134,79"  onclick='radioStation(1)' alt="Rock" title="Rock">
+						  <area shape="rect" coords="137,61,162,79"  onclick='radioStation(2)' alt="Movie" title="Movie">
+						  <area shape="rect" coords="165,61,189,79"  onclick='radioStation(3)' alt="Synt" title="Synt">
+						  <area shape="rect" coords="193,61,216,79"  onclick='skinChange()' alt="Skin" title="Skin">
+						</map>
+						<map name="radiomap7">
+						  <area shape="circle" coords="33,45,20"  onclick='playAudio()' alt="Play" title="Play">
+						  <area shape="circle" coords="268,45,20"  onclick='stopAudio()' alt="Stop" title="Stop">
+						  <area shape="rect" coords="76,56,101,78"  onclick='radioStation(0)' alt="Pop" title="Pop">
+						  <area shape="rect" coords="107,56,132,78"  onclick='radioStation(1)' alt="Rock" title="Rock">
+						  <area shape="rect" coords="138,56,163,78"  onclick='radioStation(2)' alt="Movie" title="Movie">
+						  <area shape="rect" coords="169,56,193,78"  onclick='radioStation(3)' alt="Synt" title="Synt">
+						  <area shape="rect" coords="200,56,223,78"  onclick='skinChange()' alt="Skin" title="Skin">
+						</map>
+						<map name="radiomap8">
+						  <area shape="circle" coords="35,39,20"  onclick='playAudio()' alt="Play" title="Play">
+						  <area shape="circle" coords="267,38,20"  onclick='stopAudio()' alt="Stop" title="Stop">
+						  <area shape="rect" coords="82,50,112,65"  onclick='radioStation(0)' alt="Pop" title="Pop">
+						  <area shape="rect" coords="119,50,147,65"  onclick='radioStation(1)' alt="Rock" title="Rock">
+						  <area shape="rect" coords="155,50,183,65"  onclick='radioStation(2)' alt="Movie" title="Movie">
+						  <area shape="rect" coords="191,50,218,65"  onclick='radioStation(3)' alt="Synt" title="Synt">
+						  
+						</map>
+						
+						<br><br>
+
+						
+						<!--player-->
+						
+							<p><em>Premium vozilo više srednje klase po tadasnjim standardima.Iako ih više nema tako često po našim ulicama,često ih mnogi pamte kao ozbiljne automobile svog vremena sa avangardnim stilom. S obzirom na veliku pasiju prema ovim vozilima velikog broja ljudi,ova stranica predstavlja moj poklon i drugim zaljubljenicima u ova vozila ispred svog vremena.Nadam se da će Vas moja stranica bar malo zaintrigirati i vratiti Vam neke lepe uspomene.</em></p>
+							<p><em>Ukoliko imate ikakve sugestije,predloge ili komentare u cilju poboljšanja stranice, molimo Vas kontaktirajte nas putem <a href="mailto:tomovica@yahoo.com">e-maila</a></em></p>
+							<p><em>Velika zahvalnost <a href="https://www.fordclubserbia.org/forum">Ford Clubu Srbije</a> na medjusobnoj saradnji</em></p>
+							<br/><br/><br/><br/><br/><br/>
+										
+						<p><em>Made by <a href="https://www.ford.com/" target="_blank"><img src="fordlogo.jpg" style="width:120px;"/></a> ,designed by <a href="https://en.wikipedia.org/wiki/Luigi_Colani">Luigi Colani</a> , powered by <span style="color:red;">Ace1</span> , inspired by <a href="https://en.wikipedia.org/wiki/Miami_Vice" target="_blank"></em><img src="logo2.jpg" style="width:120px;"/></a><em> and music from `80s.</em></p>
+						<div style="text-align:center;margin-top:10px"><a href="#top"><em>Vrati se na vrh stranice</em></a></div> <!--vraćanje na vrh stranice-->
+						
+						<div style="text-align:right; color:#ec0498;"><em>Naš tim Vam želi lep i uspešan dan</em></div>
+					</div>
+				</div>
+				<footer id="footer">
+					<div  style="margin-top:20px; text-shadow: white 1px 2px;"><a href="index.html"><em>Home</em></a> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <a href="istorija.html"><em>Istorija</em></a> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  <a href="linksSrb.html"><em>Linkovi</em></a> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <a href="shopSrb.html"><em>Prodavnica</em></a> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <a href="o_nama.html"><em>O nama</em></a></br></br></br></br>
+					<em><span style="text-shadow: black 1px 0 10px;">© Copyright 2019. All right reserved. Tailored by Aleksandar Tomović.</span></em></div>
+				</footer>
+			</div>
+		
+		</body>
+	
+	
+	
+	
+	
+	</html>
